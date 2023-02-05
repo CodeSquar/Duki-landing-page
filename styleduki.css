@@ -1,0 +1,159 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    width: 100vw;
+    height: 100vh;
+   
+  
+}
+.background{
+    position: absolute;    display: flex;
+    width: 100vw;
+    height: 100vh;
+  
+    background-image: url(https://i.scdn.co/image/ab67616d0000b273be717528344bf288d34391ca);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    filter: blur(calc(25px));
+}
+.background_color{
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.86);
+}
+.container_center{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    display: flex;
+
+    gap:24px;
+    align-items: center;
+    width: 100%;
+    max-width: 1700px;
+  position: relative;
+    margin: 48px 24px;
+}
+.info_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 112px;
+    width: 100%;
+    height: max-content;
+    color: WHITE;
+}
+.album_info{
+    display: flex;
+    flex-direction: column;
+
+}
+.artist_name{
+
+    font-size:32px;
+    font-weight: 900;
+
+}
+.album_title{ 
+    
+       margin-top:12px;
+    font-size: 96px;
+    font-weight: 900;
+}
+.album_description{
+    margin-top:12px;
+    font-size: 24px;
+    font-weight: 400;
+    opacity: 0.48;
+}
+.listen_now_btn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    padding: 24px 48px;
+    cursor: pointer;    
+    background-color: rgba(207,198,99,1);
+    box-shadow: 0px 15px 60px rgba(207,198,99,0.48);
+    border-radius: 16px;
+    border: none;
+    font-size: 16px;
+    font-weight: 900;
+    text-decoration: none;
+    color: black;
+transition: 0.12s ease-in-out;
+}
+.listen_now_btn:hover{
+    filter: brightness(1.2);
+}
+.imagen{
+    border-radius: 16px;
+    display: flex; 
+    width:  100%;
+    max-width: 600px;
+    filter:drop-shadow(0px 0px 100px rgba(0, 0, 0, 0.35));
+   
+    aspect-ratio: 1/1;
+
+    background-image: url(albumphoto.jpg) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
+  
+}
+
+
+@media (max-width: 1444px){
+    .container{
+      flex-direction: column-reverse;
+      gap: 48px;
+    }    .container_center{
+        align-items: flex-start;
+    }
+ 
+}
+@media (min-width: 768px) and (max-width: 1444px) {
+    .imagen{
+        width: 100%;
+        height: 500px;
+        max-width: 100%;
+    }
+}
+@media (max-width:768px){
+    .artist_name{
+
+    font-size: 16px;
+    }
+    .album_title{ 
+        font-size: 32px;
+
+    }
+    .album_description{
+        font-size: 16px;
+    }
+    .listen_now_btn{
+    margin: 0 auto;
+    font-size: 14px;
+    
+}
+.info_container{
+    text-align: center;
+    margin-bottom: 48px;
+}
+   
+}
